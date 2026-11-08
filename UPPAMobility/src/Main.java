@@ -11,9 +11,17 @@ public class Main {
     public static void main(String[] args) {
         Station campusNord = new Station("Campus Nord", 5);
         Station bibliotheque = new Station("Bibliotheque", 5);
+        Station station2 = new Station("Campus sud", 1);
 
         User alice = new User("U-1", "Alice");
+        User messi = new User("U-10", "messi");
+
         Bike b104 = new Bike("B-104");
+        Bike b105 = new Bike("B-105");
+        Bike b106 = new Bike("B-106");
+
+        //station2.addBike(b106);
+        //station2.addBike(b104);
 
         campusNord.addBike(b104);
         System.out.println(b104.getId() + " initially at " + campusNord.getName()
@@ -25,6 +33,8 @@ public class Main {
         LocalDateTime end = LocalDateTime.of(2026, 10, 12, 11, 30);
 
         Rental rental = service.rentBike(alice, b104, campusNord, start);
+        //Rental rental2 = service.rentBike(messi, b104, campusNord, start);
+
         System.out.println(rental.getUser().getName() + " rents "
                 + rental.getBike().getId() + " at " + rental.getStartTime().toLocalTime());
         System.out.println(b104.getId() + " available: " + b104.isAvailable());
