@@ -5,6 +5,11 @@ public class Rental {
     private Bike bike;
     private LocalDateTime startTime;
     private LocalDateTime endtTime;
+    public Rental (User user,Bike bike,LocalDateTime starTime){
+        this.user=user;
+        this.bike=bike;
+        this.startTime=starTime;
+    }
     public User getUser (){
         return user;
     }
