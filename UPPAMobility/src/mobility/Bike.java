@@ -25,4 +25,7 @@ public class Bike {
     void markReturned() {
         this.available = true;
     }
+    public boolean canBeRented () {
+         return this.isAvailable();
+         }
 }

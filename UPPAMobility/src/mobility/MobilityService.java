@@ -7,7 +7,7 @@ public class MobilityService {
             throw new IllegalStateException("Bike is not available");
         }
         if (!station.containsBike(bike)) {
-            throw new IllegalArgumentException("Bike does not belong to this station");
+            throw new IllegalArgumentException("bike does not belong to this station");
         }
 
         Rental rental = new Rental(user, bike, startTime);
