@@ -1,6 +1,7 @@
 import java.time.LocalDateTime;
 
 import mobility.Bike;
+import mobility.ElectricBike;
 import mobility.MobilityService;
 import mobility.Rental;
 import mobility.Station;
@@ -22,6 +23,16 @@ public class Main {
 
         //station2.addBike(b106);
         //station2.addBike(b104);
+
+        Bike b1 = new Bike ("B -110 ") ;
+        Bike b2 = new ElectricBike ("EB -201 ", 50) ;
+        ElectricBike b3 = new ElectricBike ("EB -202 ", 5) ;
+
+        System.out.println("le velo "+ b1 +" est emprintable :"+ b1.canBeRented());
+        System.out.println("le velo "+ b2 +" est emprintable :"+ b2.canBeRented());
+        System.out.println("le velo "+ b3 +" est emprintable :"+ b3.canBeRented());
+
+
 
         campusNord.addBike(b104);
         System.out.println(b104.getId() + " initially at " + campusNord.getName()
