@@ -11,4 +11,9 @@ public class ElectricBike extends Bike{
     public int getBatteryLevel(){
         return this.batteryLevel;
     }
+    @Override 
+    public boolean canBeRented () {
+        //return (this.isAvailable() && this.batteryLevel>=10); en ecrivant direct sans heriter
+        return super.canBeRented() && this.batteryLevel>=10;
+    }
 }
